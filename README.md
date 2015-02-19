@@ -1,5 +1,17 @@
 # Component Analysis using Torch7
 
+- Principal Component Analysis (PCA)
+
+- Whitened Principal Component Analysis (W-PCA)
+
+- Linear Discriminant Analysis (LDA)
+
+- Locality Preserving Projections (LPP)
+
+- Neighbourhood Preserving Projections (NPP)
+
+- Fast Independent Component Analysis (FastICA)
+
 by John-Alexander Assael
 
 http://www.johnassael.com
