@@ -1,7 +1,7 @@
 --[=====[
 
     Copyright (C) 2015 John-Alexander Assael (www.johnassael.com)
-    https://github.com/iassael/component_analysis_torch7
+    https://github.com/iassael/torch7-decomposition
 
     The MIT License (MIT)
 

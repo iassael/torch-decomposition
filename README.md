@@ -16,12 +16,13 @@ by John-Alexander Assael
 
 http://www.johnassael.com
 
-https://github.com/iassael/component_analysis_torch7
+https://github.com/iassael/torch7-decomposition
+
 
 ## Installation
-You can clone this repository or download the module using:
 
-~~ `luarocks install decomposition`~~.
+Clone this repository or download the source code.
+
 
 ## Usage
 
@@ -56,7 +57,7 @@ The implementations were developed in terms of learning and may not be optimal.
 ## License
 
 Copyright (C) 2015 John-Alexander Assael (www.johnassael.com)
-https://github.com/iassael/component_analysis_torch7
+https://github.com/iassael/torch7-decomposition
 
 The MIT License (MIT)
 
