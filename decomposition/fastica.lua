@@ -25,12 +25,15 @@
 
 --]=====]
 
-function fastica(x, y, n_comp)
+local fastica = function(x, y, n_comp)
     -- Functions and Derivatives
     local g = torch.tanh
     local g_prime = function(u)
         return torch.ones(u:size()) - torch.tanh(u):pow(2)
     end
+
+   -- Dependencies
+   local decomposition = require 'decomposition'
     
     -- Init sizes
     M = x:size(1)
@@ -42,7 +45,7 @@ function fastica(x, y, n_comp)
     local x = x - torch.ger(torch.ones(x:size(1)), mean:squeeze())    
     
     -- Whiten data
-    U = pca(x, C, true)
+    U = decomposition.pca(x, C, true)
     x = x * U
     
     -- Transpose for same notation
@@ -101,3 +104,5 @@ function fastica(x, y, n_comp)
     
     return ICA
 end
+
+return fastica

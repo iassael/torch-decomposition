@@ -25,7 +25,7 @@
 
 --]=====]
 
-function lpp(x, n_comp)
+local npp = function(x, n_comp)
     
     -- Size
     local N = x:size(1)
@@ -61,8 +61,11 @@ function lpp(x, n_comp)
     -- Build Laplacian Matrix
     local L = D - W
     
-    -- LPP
-    local W_eig = torch.inverse(x:t() * D * x) * x:t() * L * x
+    -- NPP
+    local M = (torch.eye(W:size(1)) - W) * (torch.eye(W:size(1)) - W):t()
+    local C = x:t() * x
+    local L = x:t() * M * x
+    local W_eig = torch.inverse(C) * L
     
     -- Solve generalized eigenvector problem to obtain solutions
     local ce, cv = torch.symeig(W_eig, 'V')
@@ -87,3 +90,5 @@ function lpp(x, n_comp)
     
     return A
 end
+
+return npp

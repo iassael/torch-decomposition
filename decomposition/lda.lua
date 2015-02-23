@@ -25,16 +25,19 @@
 
 --]=====]
 
-function lda(x, y, n_comp)
+local lda = function(x, y, n_comp)
     
     -- Make y a vector
     local y = y:clone():squeeze()
     local y_idx = torch.range(1,y:size(1)):long()
     
     local n_classes = y:max()
+
+   -- Dependencies
+   local decomposition = require 'decomposition'
     
     -- PCA to go to N-C dimensional space
-    U = pca(x, x:size(1)-n_classes, true)
+    U = decomposition.pca(x, x:size(1)-n_classes, true)
     x = x * U
     
     -- Init
@@ -101,3 +104,5 @@ function lda(x, y, n_comp)
     
     return W
 end
+
+return lda

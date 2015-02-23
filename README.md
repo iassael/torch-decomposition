@@ -1,4 +1,4 @@
-# Component Analysis using Torch7
+# Decomposition module for Torch7
 
 - Principal Component Analysis (PCA)
 
@@ -19,8 +19,27 @@ http://www.johnassael.com
 https://github.com/iassael/component_analysis_torch7
 
 ## Installation
+You can clone this repository or download the module using:
 
-Use iTorch notebook to open `component_analysis_torch7.ipynb`
+ `luarocks install decomposition`.
+
+## Usage
+
+Call `decomposition = require "decomposition"`
+and then any of the following:
+
+- `decomposition.pca(x)`,
+
+- `decomposition.lda(x, y)`,
+
+- `decomposition.lpp(x)`,
+
+- `decomposition.npp(x)`,
+
+- `decomposition.fastica(x)`.
+
+
+Alternativly, you can use iTorch notebook and open `decomposition.ipynb`.
 
 ## Contributing
 
@@ -32,7 +51,7 @@ Use iTorch notebook to open `component_analysis_torch7.ipynb`
 
 ## Notes
 
-The implementations were developed in terms of learning and may note be optimal.
+The implementations were developed in terms of learning and may not be optimal.
 
 ## License
 
