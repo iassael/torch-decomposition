@@ -2,7 +2,8 @@ package = "decomposition"
 version = "scm-0"
 
 source = {
-  url = "https://github.com/iassael/torch7-decomposition.git" -- We don't have one yet
+  url = "git://github.com/iassael/torch7-decomposition",
+  dir = "decomposition"
 }
 
 description = {
@@ -26,11 +27,6 @@ dependencies = {
 build = {
   type = "builtin",
   modules = {
-     ['decomposition.init'] = 'decomposition/init.lua',
-     ['decomposition.pca'] = 'decomposition/pca.lua',
-     ['decomposition.lda'] = 'decomposition/lda.lua',
-     ['decomposition.lpp'] = 'decomposition/lpp.lua',
-     ['decomposition.npp'] = 'decomposition/npp.lua',
-     ['decomposition.fastica'] = 'decomposition/fastica.lua',
-  },
+    decomposition = "./decomposition.lua"
+  }
 }

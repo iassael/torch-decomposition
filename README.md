@@ -21,7 +21,7 @@ https://github.com/iassael/component_analysis_torch7
 ## Installation
 You can clone this repository or download the module using:
 
- `luarocks install decomposition`.
+~~ `luarocks install decomposition`~~.
 
 ## Usage
 
